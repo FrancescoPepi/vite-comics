@@ -5,5 +5,19 @@
     justify-content: center;
   } @else if($posizione== "between") {
     justify-content: space-between;
+  } @else if($posizione== "around") {
+    justify-content: space-around;
+  }
+}
+@mixin linkStyle() {
+  display: flex;
+  align-items: center;
+
+  list-style-type: none;
+  a {
+    padding: 0 10px;
+    color: black;
+    text-wrap: nowrap;
+    text-decoration: none;
   }
 }

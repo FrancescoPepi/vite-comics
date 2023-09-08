@@ -73,16 +73,13 @@ export default {
     isLinkActive(link, index) {
       this.linkActive = index;
       setTimeout(() => {
-        this.prova(index);
+        this.moveBar(index);
       }, 100);
     },
-    prova(link) {
-      // const active = document.querySelector(".active");
+    moveBar(link) {
       const bar = document.getElementById("select");
-      // const prova = active.getBoundingClientRect();
-      // console.log(prova.left.toFixed());
       bar.style.left = `calc(70px * ${link})`;
-      console.log(bar.style.left);
+      console.log(bar);
     },
   },
 };
@@ -135,7 +132,7 @@ div {
   height: 100px;
   @include posizione("between");
   .img-box {
-    @include posizione();
+    // @include posizione();
     height: 100%;
     img {
       width: 60%;
