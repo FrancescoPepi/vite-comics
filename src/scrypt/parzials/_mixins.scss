@@ -1,5 +1,9 @@
-@mixin between() {
+@mixin posizione($posizione: "center") {
   display: flex;
   align-items: center;
-  justify-content: space-evenly;
+  @if ($posizione == "center") {
+    justify-content: center;
+  } @else if($posizione== "between") {
+    justify-content: space-between;
+  }
 }

@@ -89,52 +89,61 @@ export default {
 </script>
 
 <template>
-  <div>
-    <div class="img-box">
-      <img :src="img" alt="" />
-    </div>
-
-    <ul>
-      <li
-        v-for="(link, index) in links"
-        @click="isLinkActive(link, index)"
-        :class="index == linkActive ? 'active' : ''"
-        class="menu"
-      >
-        <a :href="link.url">
-          {{ link.link.toUpperCase() }}
-        </a>
-      </li>
-      <div id="select">
-        <div></div>
+  <div class="bg">
+    <div class="container">
+      <div class="img-box">
+        <img :src="img" alt="" />
       </div>
-    </ul>
+
+      <ul>
+        <li
+          v-for="(link, index) in links"
+          @click="isLinkActive(link, index)"
+          :class="index == linkActive ? 'active' : ''"
+          class="menu"
+        >
+          <a :href="link.url">
+            {{ link.link.toUpperCase() }}
+          </a>
+        </li>
+        <div id="select">
+          <div></div>
+        </div>
+      </ul>
+    </div>
   </div>
 </template>
 
 <style lang="scss" scoped>
 @use "../scrypt/parzials/mixins.scss" as *;
 
+.bg {
+  background-color: white;
+  opacity: 80%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+}
 .active {
   // box-shadow: 0 30px 0 -5px #0282f9ff;
   a {
     color: #0282f9ff;
   }
 }
-
 div {
   height: 100px;
-  @include between();
+  @include posizione("between");
   .img-box {
+    @include posizione();
     height: 100%;
     img {
       width: 60%;
     }
   }
   ul {
-    padding: 0;
     position: relative;
-    @include between();
+    @include posizione("between");
     li {
       width: 70px;
       list-style-type: none;
@@ -149,7 +158,7 @@ div {
       width: 70px;
       height: 0px;
       position: absolute;
-      z-index: -1;
+      justify-content: center;
       left: 0;
       top: 0;
       transition: all 0.3s ease-out;
