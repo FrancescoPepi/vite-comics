@@ -2,14 +2,16 @@
 import HeaderComponent from "./components/Header.vue";
 import MainComponent from "./components/Main.vue";
 import BuyComponent from "./components/Buy.vue";
-import FooterComponent from "./components/Footer.vue";
+import FooterTopComponent from "./components/FooterTop.vue";
+import FooterBottomComponent from "./components/FooterBottom.vue";
 
 export default {
   components: {
     HeaderComponent,
     MainComponent,
     BuyComponent,
-    FooterComponent,
+    FooterTopComponent,
+    FooterBottomComponent,
   },
 };
 </script>
@@ -17,7 +19,8 @@ export default {
   <HeaderComponent></HeaderComponent>
   <MainComponent class="m-top"></MainComponent>
   <BuyComponent></BuyComponent>
-  <FooterComponent></FooterComponent>
+  <FooterTopComponent></FooterTopComponent>
+  <FooterBottomComponent></FooterBottomComponent>
 </template>
 
 <style lang="scss">
