@@ -69,6 +69,9 @@ div.bg {
       @include posizione("around");
       li {
         width: 50px;
+        &:hover {
+          filter: invert(0.7);
+        }
         img {
           width: 100%;
         }

@@ -140,15 +140,21 @@ div {
   }
   ul {
     position: relative;
-    @include posizione("between");
+    // @include posizione("between");
     li {
       width: 70px;
       list-style-type: none;
       text-align: center;
-
+      display: inline-block;
+      line-height: 100px;
+      cursor: pointer;
       a {
         color: black;
         text-decoration: none;
+        padding: 50px 0;
+      }
+      &:hover a {
+        filter: invert(0.4);
       }
     }
     #select {
@@ -157,7 +163,7 @@ div {
       position: absolute;
       justify-content: center;
       left: 0;
-      top: 0;
+      top: 43.5px;
       transition: all 0.3s ease-out;
       div {
         box-shadow: 0px 7px 0px 0px #0282f9ff;
