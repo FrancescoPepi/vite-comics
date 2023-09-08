@@ -46,7 +46,7 @@ export default {
           <li>
             <img :src="link.img" alt="" />
             <a :href="link.url">
-              {{ link.linkName }}
+              {{ link.linkName.toUpperCase() }}
             </a>
           </li>
         </ul>
@@ -57,20 +57,11 @@ export default {
 
 <style lang="scss" scoped>
 @use "../scrypt/parzials/mixins.scss" as *;
-// ul {
-//   height: 20px;
-
-//   img {
-//     height: 100%;
-//   }
-// }
 
 div.bg {
-  // @include posizione();
   background-color: #0282f9ff;
   color: white;
   font-size: 15px;
-  // height: 100px;
   .container {
     padding: 25px 0;
 
