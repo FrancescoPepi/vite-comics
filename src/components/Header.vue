@@ -81,7 +81,7 @@ export default {
       const bar = document.getElementById("select");
       // const prova = active.getBoundingClientRect();
       // console.log(prova.left.toFixed());
-      bar.style.left = `calc(80px * ${link})`;
+      bar.style.left = `calc(70px * ${link})`;
       console.log(bar.style.left);
     },
   },
@@ -136,9 +136,8 @@ div {
     position: relative;
     @include between();
     li {
-      width: 80px;
+      width: 70px;
       list-style-type: none;
-      // padding: 5px 20px;
       text-align: center;
 
       a {
@@ -147,17 +146,16 @@ div {
       }
     }
     #select {
-      width: 80px;
-      /* background-color: red; */
+      width: 70px;
+      height: 0px;
       position: absolute;
+      z-index: -1;
       left: 0;
       top: 0;
-      height: 50px;
-      // transition: all 0.25s ease-in-out;
       transition: all 0.3s ease-out;
       div {
-        box-shadow: inset 0px -10px 0px 0px #0282f9;
-        width: 60px;
+        box-shadow: 0px 7px 0px 0px #0282f9ff;
+        width: 55px;
       }
     }
   }
