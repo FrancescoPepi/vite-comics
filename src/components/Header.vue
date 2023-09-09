@@ -8,61 +8,51 @@ export default {
           link: "characters",
           url: "#asdsad",
           active: false,
-          position: "0px",
         },
         {
           link: "comics",
           url: "#",
           active: false,
-          position: "80px",
         },
         {
           link: "movies",
           url: "#",
           active: false,
-          position: "0px",
         },
         {
           link: "tv",
           url: "#",
           active: false,
-          position: "300px",
         },
         {
           link: "games",
           url: "#",
           active: false,
-          position: "400px",
         },
         {
           link: "collectibles",
           url: "#",
           active: false,
-          position: "500px",
         },
         {
           link: "videos",
           url: "#",
           active: false,
-          position: "600px",
         },
         {
           link: "fans",
           url: "#",
           active: false,
-          position: "700px",
         },
         {
           link: "news",
           url: "#",
           active: false,
-          position: "800px",
         },
         {
           link: "shop",
           url: "#",
           active: false,
-          position: "900px",
         },
       ],
       img: "/img/dc-logo.png",
@@ -116,8 +106,9 @@ export default {
 
 .bg {
   background-color: white;
-  opacity: 80%;
+  opacity: 93%;
   position: fixed;
+  z-index: 2;
   top: 0;
   left: 0;
   right: 0;

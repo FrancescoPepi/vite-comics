@@ -5,67 +5,31 @@ export default {
       msg: "ciao",
       links: [
         {
-          link: "characters",
+          img: "/img/footer-facebook.png",
           url: "#asdsad",
           active: false,
-          position: "0px",
         },
         {
-          link: "comics",
+          img: "/img/footer-periscope.png",
           url: "#",
           active: false,
-          position: "80px",
         },
         {
-          link: "movies",
+          img: "/img/footer-pinterest.png",
           url: "#",
           active: false,
-          position: "0px",
         },
         {
-          link: "tv",
+          img: "/img/footer-twitter.png",
           url: "#",
           active: false,
-          position: "300px",
         },
         {
-          link: "games",
+          img: "/img/footer-youtube.png",
           url: "#",
           active: false,
-          position: "400px",
-        },
-        {
-          link: "collectibles",
-          url: "#",
-          active: false,
-          position: "500px",
-        },
-        {
-          link: "videos",
-          url: "#",
-          active: false,
-          position: "600px",
-        },
-        {
-          link: "fans",
-          url: "#",
-          active: false,
-          position: "700px",
-        },
-        {
-          link: "news",
-          url: "#",
-          active: false,
-          position: "800px",
-        },
-        {
-          link: "shop",
-          url: "#",
-          active: false,
-          position: "900px",
         },
       ],
-      img: "/img/dc-logo.png",
       linkActive: 0,
     };
   },
@@ -88,24 +52,15 @@ export default {
 <template>
   <div class="bg">
     <div class="container">
-      <div class="img-box">
-        <img :src="img" alt="" />
-      </div>
+      <div class="button-box">SIGN-UP NOW!</div>
 
       <ul>
-        <li
-          v-for="(link, index) in links"
-          @click="isLinkActive(link, index)"
-          :class="index == linkActive ? 'active' : ''"
-          class="menu"
-        >
+        <span>FOLLOW US</span>
+        <li v-for="(link, index) in links" @click="isLinkActive(link, index)">
           <a :href="link.url">
-            {{ link.link.toUpperCase() }}
+            <img :src="link.img" alt="" />
           </a>
         </li>
-        <div id="select">
-          <div></div>
-        </div>
       </ul>
     </div>
   </div>
@@ -116,14 +71,9 @@ export default {
 
 .bg {
   background-color: #303030ff;
-  // opacity: 80%;
-  // position: fixed;
-  // top: 0;
-  // left: 0;
-  // right: 0;
+  height: 150px;
 }
 .active {
-  // box-shadow: 0 30px 0 -5px #0282f9ff;
   a {
     color: #0282f9ff;
   }
@@ -131,22 +81,17 @@ export default {
 div {
   height: 100px;
   @include posizione("between");
-  .img-box {
-    // @include posizione();
-    height: 100%;
-    img {
-      width: 60%;
-    }
-  }
+
   ul {
-    position: relative;
-    // @include posizione("between");
+    color: #0282f9ff;
+    font-size: 15px;
+    display: flex;
+    align-items: center;
     li {
-      width: 70px;
+      width: 60px;
       list-style-type: none;
       text-align: center;
-      display: inline-block;
-      line-height: 100px;
+      display: block;
       cursor: pointer;
       a {
         color: black;
@@ -154,7 +99,7 @@ div {
         padding: 50px 0;
       }
       &:hover a {
-        filter: invert(0.4);
+        filter: invert(1);
       }
     }
     #select {
