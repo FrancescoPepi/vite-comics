@@ -80,6 +80,7 @@ export default {
 .bg {
   height: 350px;
   background-image: url("/img/footer-bg.jpg");
+  background-size: cover;
   color: white;
   .container {
     display: flex;
@@ -107,13 +108,12 @@ export default {
     }
 
     #logo {
-      position: relative;
       width: 40%;
       height: 350px;
       overflow: hidden;
       img {
-        position: absolute;
-        bottom: -30%;
+        position: relative;
+        bottom: 15%;
         width: 100%;
         display: block;
         object-fit: cover;

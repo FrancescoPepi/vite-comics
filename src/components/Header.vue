@@ -5,52 +5,52 @@ export default {
       msg: "ciao",
       links: [
         {
-          link: "characters",
+          text: "characters",
           url: "#asdsad",
           active: false,
         },
         {
-          link: "comics",
+          text: "comics",
           url: "#",
           active: false,
         },
         {
-          link: "movies",
+          text: "movies",
           url: "#",
           active: false,
         },
         {
-          link: "tv",
+          text: "tv",
           url: "#",
           active: false,
         },
         {
-          link: "games",
+          text: "games",
           url: "#",
           active: false,
         },
         {
-          link: "collectibles",
+          text: "collectibles",
           url: "#",
           active: false,
         },
         {
-          link: "videos",
+          text: "videos",
           url: "#",
           active: false,
         },
         {
-          link: "fans",
+          text: "fans",
           url: "#",
           active: false,
         },
         {
-          link: "news",
+          text: "news",
           url: "#",
           active: false,
         },
         {
-          link: "shop",
+          text: "shop",
           url: "#",
           active: false,
         },
@@ -85,12 +85,13 @@ export default {
       <ul>
         <li
           v-for="(link, index) in links"
+          :key="index"
           @click="isLinkActive(link, index)"
           :class="index == linkActive ? 'active' : ''"
           class="menu"
         >
           <a :href="link.url">
-            {{ link.link.toUpperCase() }}
+            {{ link.text.toUpperCase() }}
           </a>
         </li>
         <div id="select">

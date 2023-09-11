@@ -1,5 +1,6 @@
 <script>
 import HeaderComponent from "./components/Header.vue";
+import HeroComponent from "./components/Hero.vue";
 import MainComponent from "./components/Main.vue";
 import BuyComponent from "./components/Buy.vue";
 import FooterTopComponent from "./components/FooterTop.vue";
@@ -8,6 +9,7 @@ import FooterBottomComponent from "./components/FooterBottom.vue";
 export default {
   components: {
     HeaderComponent,
+    HeroComponent,
     MainComponent,
     BuyComponent,
     FooterTopComponent,
@@ -17,7 +19,8 @@ export default {
 </script>
 <template>
   <HeaderComponent></HeaderComponent>
-  <MainComponent class="m-top"></MainComponent>
+  <HeroComponent class="m-top"></HeroComponent>
+  <MainComponent></MainComponent>
   <BuyComponent></BuyComponent>
   <FooterTopComponent></FooterTopComponent>
   <FooterBottomComponent></FooterBottomComponent>
