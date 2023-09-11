@@ -5,6 +5,7 @@ export default {
   data() {
     return {
       title: "titolo",
+      hero: "/img/jumbotron.jpg",
     };
   },
 
@@ -25,7 +26,13 @@ export default {
 </script>
 
 <template>
-  <h1>{{ title }}</h1>
+  <div class="hero"></div>
 </template>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.hero {
+  height: 400px;
+  background-image: url("/img/jumbotron.jpg");
+  background-position: top;
+}
+</style>

@@ -37,7 +37,7 @@ export default {
 .card {
   width: calc((100% - 180px) / 6);
   aspect-ratio: 1/1;
-  margin: 15px;
+  margin: 25px 15px;
   .img-card {
     overflow: hidden;
     width: 100%;

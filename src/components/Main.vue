@@ -97,13 +97,17 @@ export default {
 </script>
 
 <template>
-  <div>
+  <div class="bg">
     <div class="container">
-      <CardProduct
-        v-for="card in cards"
-        :key="card.thumb"
-        :cards="card"
-      ></CardProduct>
+      <div class="btn series">CURRENT SERIES</div>
+      <div class="card-container">
+        <CardProduct
+          v-for="card in cards"
+          :key="card.thumb"
+          :cards="card"
+        ></CardProduct>
+      </div>
+      <div class="btn">LOAD MORE</div>
     </div>
   </div>
 </template>
@@ -111,12 +115,37 @@ export default {
 <style lang="scss" scoped>
 @use "../scrypt/parzials/mixins.scss" as *;
 
-div {
-  display: flex;
-  align-items: flex-start;
-  flex-wrap: wrap;
+.bg {
+  .btn {
+    background-color: #0282f9ff;
+    padding: 10px 25px;
+    font-size: 15px;
+    min-width: 200px;
+    text-align: center;
+  }
+  .series {
+    font-size: 30px;
+
+    position: absolute;
+    top: -30px;
+    left: 100px;
+    z-index: 1;
+  }
+  position: relative;
+
   background-color: #1c1c1cff;
   color: white;
-  margin: 10px auto;
+  .container {
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: center;
+    .card-container {
+      flex-wrap: wrap;
+      display: flex;
+      align-items: baseline;
+    }
+  }
+  padding-top: 30px;
+  padding-bottom: 20px;
 }
 </style>
