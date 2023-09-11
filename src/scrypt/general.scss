@@ -20,4 +20,18 @@
   &:hover {
     filter: invert(0.3);
   }
+
+  body {
+    font-family: "Signika Negative", sans-serif;
+    font-weight: 600;
+    font-size: 10px;
+
+    .m-top {
+      margin-top: 100px;
+    }
+    .container {
+      margin: auto;
+      width: 80%;
+    }
+  }
 }

@@ -1,27 +1,10 @@
 <script>
-// import HeaderComponent from "./components/Header.vue";
-
 export default {
   data() {
     return {
-      title: "titolo",
       hero: "/img/jumbotron.jpg",
     };
   },
-
-  // 	methods:{
-  // 		myMethods(){
-  // 			...
-  // 		},
-  // 	},
-
-  // components: {
-  //	MyComponent,
-  // },
-
-  // 	props:{
-  // 		passaggioInfo: stringa,
-  //  	 },
 };
 </script>
 

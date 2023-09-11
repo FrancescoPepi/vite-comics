@@ -2,59 +2,6 @@
 export default {
   data() {
     return {
-      msg: "ciao",
-      links: [
-        {
-          text: "characters",
-          url: "#asdsad",
-          active: false,
-        },
-        {
-          text: "comics",
-          url: "#",
-          active: false,
-        },
-        {
-          text: "movies",
-          url: "#",
-          active: false,
-        },
-        {
-          text: "tv",
-          url: "#",
-          active: false,
-        },
-        {
-          text: "games",
-          url: "#",
-          active: false,
-        },
-        {
-          text: "collectibles",
-          url: "#",
-          active: false,
-        },
-        {
-          text: "videos",
-          url: "#",
-          active: false,
-        },
-        {
-          text: "fans",
-          url: "#",
-          active: false,
-        },
-        {
-          text: "news",
-          url: "#",
-          active: false,
-        },
-        {
-          text: "shop",
-          url: "#",
-          active: false,
-        },
-      ],
       img: "/img/dc-logo.png",
       linkActive: 0,
     };
@@ -72,6 +19,9 @@ export default {
       console.log(bar);
     },
   },
+  props: {
+    LinksMenu: Object,
+  },
 };
 </script>
 
@@ -84,7 +34,7 @@ export default {
 
       <ul>
         <li
-          v-for="(link, index) in links"
+          v-for="(link, index) in LinksMenu"
           :key="index"
           @click="isLinkActive(link, index)"
           :class="index == linkActive ? 'active' : ''"
@@ -115,7 +65,6 @@ export default {
   right: 0;
 }
 .active {
-  // box-shadow: 0 30px 0 -5px #0282f9ff;
   a {
     color: #0282f9ff;
   }
@@ -124,7 +73,6 @@ div {
   height: 100px;
   @include posizione("between");
   .img-box {
-    // @include posizione();
     height: 100%;
     img {
       width: 60%;
@@ -132,7 +80,6 @@ div {
   }
   ul {
     position: relative;
-    // @include posizione("between");
     li {
       width: 70px;
       list-style-type: none;

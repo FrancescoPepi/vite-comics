@@ -2,53 +2,12 @@
 export default {
   data() {
     return {
-      links: [
-        {
-          title: "DC COMICS",
-          subLink: [
-            "Characters",
-            "Comics",
-            "Movies",
-            "TV",
-            "Games",
-            "Videos",
-            "News",
-          ],
-        },
-        {
-          title: "DC",
-          subLink: [
-            "Terms Of Use",
-            "Privacy policy (New)",
-            "Ad Choices",
-            "Advertising",
-            "Jobs",
-            "Subscriptions",
-            "Talent Workshops",
-            "CPSC Certificates",
-            "Ratings",
-            "Shop Help",
-            "Contact Us",
-          ],
-        },
-        {
-          title: "SITES",
-          subLink: [
-            "DC",
-            "MAD Magazine",
-            "DC Kids",
-            "DC Universe",
-            "DC Power Visa",
-          ],
-        },
-        {
-          title: "SHOP",
-          subLink: ["Shop DC", "Shop DC Collectibles"],
-        },
-      ],
       imgBg: "/img/footer-bg.jpg",
       img: "/img/dc-logo-bg.png",
     };
+  },
+  props: {
+    LinksFooterTop: Object,
   },
 };
 </script>
@@ -57,7 +16,7 @@ export default {
   <div class="bg">
     <div class="container">
       <div class="container-links">
-        <div id="links" v-for="link in links">
+        <div id="links" v-for="link in LinksFooterTop">
           <div class="box">
             {{ link.title }}
             <ul>

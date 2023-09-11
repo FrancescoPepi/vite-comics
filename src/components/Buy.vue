@@ -1,36 +1,10 @@
 <script>
 export default {
   data() {
-    return {
-      msg: "--> Content goes here <--",
-      buyArray: [
-        {
-          linkName: "digital comics",
-          url: "#",
-          img: "/img/buy-comics-digital-comics.png",
-        },
-        {
-          linkName: "dc merchandise",
-          url: "#",
-          img: "/img/buy-comics-merchandise.png",
-        },
-        {
-          linkName: "subscription",
-          url: "#",
-          img: "/img/buy-comics-subscriptions.png",
-        },
-        {
-          linkName: "comic shop locator",
-          url: "#",
-          img: "/img/buy-comics-shop-locator.png",
-        },
-        {
-          linkName: "dc power visa",
-          url: "#",
-          img: "/img/buy-dc-power-visa.svg",
-        },
-      ],
-    };
+    return {};
+  },
+  props: {
+    LinksBuy: Object,
   },
 };
 </script>
@@ -38,11 +12,8 @@ export default {
 <template>
   <div class="bg">
     <div class="container">
-      <div v-show="buyArray.length <= 0">
-        {{ msg }}
-      </div>
-      <div class="link" v-show="buyArray.length > 0">
-        <ul v-for="(link, index) in buyArray">
+      <div class="link">
+        <ul v-for="(link, index) in LinksBuy">
           <li>
             <img :src="link.img" alt="" />
             <a :href="link.url">

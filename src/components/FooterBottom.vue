@@ -1,50 +1,11 @@
 <script>
 export default {
   data() {
-    return {
-      msg: "ciao",
-      links: [
-        {
-          img: "/img/footer-facebook.png",
-          url: "#asdsad",
-          active: false,
-        },
-        {
-          img: "/img/footer-periscope.png",
-          url: "#",
-          active: false,
-        },
-        {
-          img: "/img/footer-pinterest.png",
-          url: "#",
-          active: false,
-        },
-        {
-          img: "/img/footer-twitter.png",
-          url: "#",
-          active: false,
-        },
-        {
-          img: "/img/footer-youtube.png",
-          url: "#",
-          active: false,
-        },
-      ],
-      linkActive: 0,
-    };
+    return {};
   },
-  methods: {
-    isLinkActive(link, index) {
-      this.linkActive = index;
-      setTimeout(() => {
-        this.moveBar(index);
-      }, 100);
-    },
-    moveBar(link) {
-      const bar = document.getElementById("select");
-      bar.style.left = `calc(70px * ${link})`;
-      console.log(bar);
-    },
+
+  props: {
+    SocialLinks: Object,
   },
 };
 </script>
@@ -56,7 +17,7 @@ export default {
 
       <ul>
         <span>FOLLOW US</span>
-        <li v-for="(link, index) in links" @click="isLinkActive(link, index)">
+        <li v-for="(link, index) in SocialLinks" :key="link.index">
           <a :href="link.url">
             <img :src="link.img" alt="" />
           </a>
